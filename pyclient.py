@@ -46,6 +46,7 @@ connection = pymysql.connect(host=args.host,
 cursor = connection.cursor()
 
 # 从 input.sql 文件中读取 SQL 语句及其执行次数
+print(f"解析脚本： {args.file}")
 sql_statements_with_times = parse_sql_file(args.file)
 
 # 执行 SQL 语句
