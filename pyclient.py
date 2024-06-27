@@ -30,7 +30,7 @@ parser = argparse.ArgumentParser(description="在 MySQL 数据库上执行 SQL �
 parser.add_argument("-h", "--host", required=True, help="MySQL 服务器的主机名或IP地址。")
 parser.add_argument("-P", "--port", required=True, help="MySQL 服务器的端口号。", type=int)
 parser.add_argument("-u", "--user", required=True, help="连接 MySQL 数据库的用户名。")
-parser.add_argument("-p", "--password", required=True, help="连接 MySQL 数据库的密码。")
+parser.add_argument("-p", "--password", required=False, help="连接 MySQL 数据库的密码。")
 parser.add_argument("-D", "--database", required=True, help="要在其中执行 SQL 语句的数据库名称。")
 parser.add_argument("-f", "--file", default="input.sql", help="要执行的 SQL 脚本路径。")
 parser.add_argument("--help", action="help", default=argparse.SUPPRESS, help="显示此帮助信息并退出。")
