@@ -62,7 +62,7 @@ for statement, times in sql_statements_with_times:
             if statement.lower().startswith('select'):
                 cursor.fetchall()
             else:
-                connection.commit()
+                pass
     except Exception as e:
         print(f"执行 SQL 语句时出错： {e}")
         continue  # 跳过当前 SQL 语句的剩余次数，并继续下一个
@@ -70,6 +70,7 @@ for statement, times in sql_statements_with_times:
     end_time = time.time()  # 记录结束时间
     time_taken = end_time - start_time  # 计算经过的时间
     print(f"执行 {times} 次耗时： {time_taken:.3f} 秒")
+    connection.commit()
 
 # 断开数据库连接
 cursor.close()
