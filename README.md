@@ -2,8 +2,7 @@
 A customized python-mysql client support execute query multiple times
 
 ## install
-
-depends on pymysql library, install it first
+依赖 python3 和 pymysql 库，请先安装 python3 及 pymysql 库。
 
 ```
 pip3 install pymysql
